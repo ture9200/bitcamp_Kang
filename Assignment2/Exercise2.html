@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>지도만들기</title>
+</head>
+<body>
+ <style>
+    *{
+      margin:10px;
+      padding:0;
+    }
+
+    body{
+      display:flex;
+      justify-content: center;
+    }
+
+    .btn{
+        color:blue;
+        font-weight: bold;
+    }
+
+ </style>
+<div id="map" style="width:75vw;height:80vh;"></div>
+
+<div class="panel">
+    <div class="col-md-8">
+  <button class="btn" onclick="changeData('http://localhost:5555/Assignment2/1.json')">레스토랑</button>
+  <button class="btn" onclick="changeData('http://localhost:5555/Assignment2/2.json')">까페</button>
+  <button class="btn" onclick="changeData('http://localhost:5555/Assignment2/3.json')">가볼만한곳</button>
+</div>
+
+<ul class="PlaceList">
+</ul>
+
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=9bf789cecf9963eafd220f408eac8dfc"></script>
+<script>
+  var mapContainer = document.getElementById('map'),
+          mapOption = {
+            center: new kakao.maps.LatLng(37.499415,127.0268315),
+            level: 4
+          };
+
+  var map = new kakao.maps.Map(mapContainer, mapOption);
+</script>
+
+<script src="Exercise2-1.js"></script>
+
+<script>
+  function changeData(url){
+
+    PlaceService.loadData(url, (arr) => {
+      console.log("callback............")
+      console.log(arr)
+      makeList(arr)
+      showMarkers(arr)
+    })
+  }
+
+  function makeList(Places){
+    const PlaceEle = document.querySelector(".PlaceList")
+    let str = ''
+
+    for (let i = 0; i < Places.length ; i++) {
+      console.log(Places[i])
+      str += `<li data-num="${i}">${Places[i].name}</li>`
+    }//end for
+
+    PlaceEle.innerHTML = str
+  }
+
+  const markerArr = []
+
+  function showMarkers(Places){
+
+    for (let i = 0; i < markerArr.length; i++) {
+      markerArr[i].setMap(null)
+    }
+
+    for (let i = 0; i <Places.length ; i++) {
+      const place= Places[i]
+      const latLng = new kakao.maps.LatLng(place.lat, place.lng);
+      const marker = new kakao.maps.Marker({
+        map:map,
+        position: latLng,
+       title: place.name
+      })
+      markerArr.push(marker)
+    }//end for
+  }
+
+
+  document.querySelector(".PlaceList").addEventListener("click",(e) => {
+    e.preventDefault()
+    e.stopPropagation()
+    const target = e.target
+
+    const num = target.getAttribute("data-num")
+    const place= PlaceService.getDataByIndex(num)
+    console.log(place)
+
+    showMarkers([place])
+
+  },false)
+
+</script>
+
+</body>
+</html>

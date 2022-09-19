@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>지도생성만들기</title>
+</head>
+<body>
+
+<div>
+  <button onclick="loadData('http://localhost:5555/Assignment2/1.json')">레스토랑</button>
+  <button onclick="loadData('http://localhost:5555/Assignment2/2.json')">까페</button>
+  <button onclick="loadData('http://localhost:5555/Assignment2/3.json')">가볼만한 곳</button>
+</div>
+
+<li class="PlaceList">
+
+</li>
+
+<script>
+
+  function loadData(serverInfo){
+
+    console.log("loadData: " + serverInfo )
+
+    fetch(serverInfo)
+            .then(  response => response.json())
+            .then(  data => {
+              //console.log(data)
+              makeList(data)
+            })
+
+  }
+
+  function makeList(Places){
+    const liEle= document.querySelector(".PlaceList")
+    let str = ''
+
+    for (let i = 0; i < Places.length ; i++) {
+      console.log(Places[i])
+      str += `<li data-name="${Places[i].name}" data-lat="${Places[i].lat}" data-lng="${Places[i].lng}" >${Places[i].name}</li>`
+    }//end for
+
+    liEle.innerHTML = str
+  }
+
+  document.querySelector(".PlaceList").addEventListener("click", (e) => {
+    e.stopPropagation()
+    e.preventDefault()
+    const target = e.target
+
+    if(target.tagName !== 'LI'){
+      return
+    }
+
+    console.log(target)
+    const name = target.getAttribute("data-name")
+    const lat = target.getAttribute("data-lat")
+    const lng = target.getAttribute("data-lng")
+
+    console.log(name, lat, lng)
+
+  },false)
+
+</script>
+
+</body>
+</html>
