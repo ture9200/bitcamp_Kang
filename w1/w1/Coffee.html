@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+          rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+          crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <title>Team2 cafe 환영합니다:)</title>
+
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico"/>
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet"/>
+
+</head>
+
+<body>
+<style>
+    #1 {
+        display: flex;
+        align-content: center;
+    }
+
+    .title {
+        font-weight: bold;
+        font-size: 14px !important;
+    }
+
+    h1 {
+        font-weight: bold;
+        font-family: HY헤드라인M;
+    }
+
+    .Product button {
+        width: 100px;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .f-left {
+        float: left;
+    }
+
+    .f-right {
+        float: right;
+    }
+
+    .hide {
+        display: none;
+    }
+
+</style>
+<div class="d-flex" id="wrapper">
+
+    <!-- Sidebar-->
+    <div class="border-end bg-white" id="sidebar-wrapper" style="width:10%">
+        <div class="sidebar-heading border-bottom bg-light" style="height:3.2%; text-align: center;"><a href="index.html"> Team2 Cafe</a></div>
+        <div class="list-group list-group-flush">
+            <a class="list-group-item list-group-item-action list-group-item-light p-3" href="Coffee.html">Coffee</a>
+            <a class="list-group-item list-group-item-action list-group-item-light p-3"
+               href="Flatccino.html">Flatccino</a>
+            <a class="list-group-item list-group-item-action list-group-item-light p-3" href="Dessert.html">Dessert</a>
+        </div>
+    </div>
+    <!-- Page content wrapper-->
+    <div id="page-content-wrapper">
+        <!-- Top navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+            <div class="container-fluid">
+                <button class="btn btn-primary" id="sidebarToggle">Menu</button>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+                        <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
+                               data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Contact Us</a>
+                            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#!">FAQ</a>
+                                <a class="dropdown-item" href="#!">News & Notice</a>
+                                <!--<div class="dropdown-divider"></div>-->
+                                <a class="dropdown-item" href="#!">Map</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container" id="1">
+            <div class="row">
+                <h1>Coffee</h1>
+                <div class="col-md-8">
+                    <div class="row row-cols-1 row-cols-md-3 g-3">
+                        <div class="col">
+                            <div class="Coffee">
+                                <img src="menu/1.jpg" class="img-top" alt="no Image Search">
+                                <div class="Product" data-order-id="Espresso">
+                                    <h5 class="title">에스프레소</h5>
+                                    <p><span class="price">2900</span>원</p>
+                                    <button class="btn btn-success btn-sm btn-add">Add Cart</button>
+                                    <button class="btn btn-danger btn-sm btn-delete">Delete Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="Coffee">
+                                <img src="menu/2.jpg" class="img-top" alt="no Image Search">
+                                <div class="Product" data-order-id="EspressoConPanna">
+                                    <h5 class="title">에스프레소 콘파냐</h5>
+                                    <p><span class="price">3200</span>원</p>
+                                    <button class="btn-add">Add Cart</button>
+                                    <button class="btn-delete">Delete Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="Coffee">
+                                <img src="MENU/3.jpg" class="img-top" alt="no Image Search">
+                                <div class="Product" data-order-id="IceAmericano">
+                                    <h5 class="title">아이스 아메리카노</h5>
+                                    <p><span class="price">3200</span>원</p>
+                                    <button class="btn-add">Add Cart</button>
+                                    <button class="btn-delete">Delete Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="Coffee">
+                                <img src="MENU/4.jpg" class="img-top" alt="no Image Search">
+                                <div class="Product" data-order-id="Americano">
+                                    <h5 class="title">아메리카노</h5>
+                                    <p><span class="price">3200</span>원</p>
+                                    <button class="btn-add">Add Cart</button>
+                                    <button class="btn-delete">Delete Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="Coffee">
+                                <img src="MENU/5.jpg" class="img-top" alt="no Image Search">
+                                <div class="Product" data-order-id="IceCaffeLatte">
+                                    <h5 class="title">아이스 까페라떼</h5>
+                                    <p><span class="price">3700</span>원</p>
+                                    <button class="btn-add">Add Cart</button>
+                                    <button class="btn-delete">Delete Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="Coffee">
+                                <img src="MENU/6.jpg" class="img-top" alt="no Image Search">
+                                <div class="Product" data-order-id="CaffeLatte">
+                                    <h5 class="title">까페라떼</h5>
+                                    <p><span class="price">3700</span>원</p>
+                                    <button class="btn-add">Add Cart</button>
+                                    <button class="btn-delete">Delete Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="Coffee">
+                                <img src="MENU/7.jpg" class="img-top" alt="no Image Search">
+                                <div class="Product" data-order-id="IceCappuccino">
+                                    <h5 class="title">아이스 카푸치노</h5>
+                                    <p><span class="price">3700</span>원</p>
+                                    <button class="btn-add">Add Cart</button>
+                                    <button class="btn-delete">Delete Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="Coffee">
+                                <img src="MENU/8.jpg" class="img-top" alt="no Image Search">
+                                <div class="Product" data-order-id="Cappuccino">
+                                    <h5 class="title">카푸치노</h5>
+                                    <p><span class="price">3700</span>원</p>
+                                    <button class="btn-add">Add Cart</button>
+                                    <button class="btn-delete">Delete Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="Coffee">
+                                <img src="MENU/9.jpg" class="img-top" alt="no Image Search">
+                                <div class="Product" data-order-id="IceCaffeMocha">
+                                    <h5 class="title">아이스 까페모카</h5>
+                                    <p><span class="price">3900</span>원</p>
+                                    <button class="btn-add">Add Cart</button>
+                                    <button class="btn-delete">Delete Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="Coffee">
+                                <img src="MENU/10.jpg" class="img-top" alt="no Image Search">
+                                <div class="Product" data-order-id="CaffeMocha">
+                                    <h5 class="title">까페모카</h5>
+                                    <p><span class="price">3900</span>원</p>
+                                    <button class="btn-add">Add Cart</button>
+                                    <button class="btn-delete">Delete Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="Coffee">
+                                <img src="MENU/11.jpg" class="img-top" alt="no Image Search">
+                                <div class="Product" data-order-id="IceCaramelMacchiato">
+                                    <h5 class="title">아이스카라멜마끼아또</h5>
+                                    <p><span class="price">3900</span>원</p>
+                                    <button class="btn-add">Add Cart</button>
+                                    <button class="btn-delete">Delete Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="Coffee">
+                                <img src="MENU/12.jpg" class="img-top" alt="no Image Search">
+                                <div class="Product" data-order-id="CaramelMacchiato">
+                                    <h5 class="title">카라멜마끼아또</h5>
+                                    <p><span class="price">3900</span>원</p>
+                                    <button>Add Cart</button>
+                                    <button>Delete Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <ol class="list-group list-group-numbered">
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div class="ms-2 me-auto" style="flex:1">
+                                <div class="fw-bold">
+                                    <div>주문</div>
+                                    <ul id="Order">
+                                        <li id="Espresso">
+                                            <div class="order-name f-left">에스프레소</div>
+                                            <div class="badge bg-primary rounded-pill order-num f-right">0</div>
+                                        </li>
+                                        <li id="EspressoConPanna">
+                                            <div class="order-name f-left">에스프레소 콘파냐</div>
+                                            <div class="badge bg-primary rounded-pill order-num f-right">0</div>
+                                        </li>
+                                        <li id="IceAmericano">
+                                            <div class="order-name f-left">아이스아메리카노</div>
+                                            <div class="badge bg-primary rounded-pill order-num f-right">0</div>
+                                        </li>
+                                        <li id="Americano">
+                                            <div class="order-name f-left">아메리카노</div>
+                                            <div class="badge bg-primary rounded-pill order-num f-right">0</div>
+                                        </li>
+                                        <li id="IceCaffeLatte">
+                                            <div class="order-name f-left">아이스카페라떼</div>
+                                            <div class="badge bg-primary rounded-pill order-num f-right">0</div>
+                                        </li>
+                                        <li id="CaffeLatte">
+                                            <div class="order-name f-left">카페라떼</div>
+                                            <div class="badge bg-primary rounded-pill order-num f-right">0</div>
+                                        </li>
+                                        <li id="IceCappuccino">
+                                            <div class="order-name f-left">아이스카푸치노</div>
+                                            <div class="badge bg-primary rounded-pill order-num f-right">0</div>
+                                        </li>
+                                        <li id="Cappuccino">
+                                            <div class="order-name f-left">카푸치노</div>
+                                            <div class="badge bg-primary rounded-pill order-num f-right">0</div>
+                                        </li>
+                                        <li id="IceCaffeMocha">
+                                            <div class="order-name f-left">아이스카페모카</div>
+                                            <div class="badge bg-primary rounded-pill order-num f-right">0</div>
+                                        </li>
+                                        <li id="CaffeMocha">
+                                            <div class="order-name f-left">카페모카</div>
+                                            <div class="badge bg-primary rounded-pill order-num f-right">0</div>
+                                        </li>
+                                        <li id="IceCaramelMacchiato">
+                                            <div class="order-name f-left">아이스카라멜마끼아또</div>
+                                            <div class="badge bg-primary rounded-pill order-num f-right">0</div>
+                                        </li>
+                                        <li id="CaramelMacchiato">
+                                            <div class="order-name f-left">카라멜마끼아또</div>
+                                            <div class="badge bg-primary rounded-pill order-num f-right">0</div>
+                                        </li>
+
+
+                                    </ul>
+                                </div>
+                                <!-- Content for list item-->
+                            </div>
+                            <span class="badge bg-primary rounded-pill" id="order-total-num" style="margin-right:10px;">0</span>
+                            <span class="badge bg-primary rounded-pill" id="order-total-price">0</span>
+                        </li>
+
+                    </ol>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- Optional JavaScript; choose one of the two! -->
+
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+<!-- Core theme JS-->
+<script src="js/scripts.js"></script>
+<!-- Option 2: Separate Popper and Bootstrap JS -->
+<!--
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+-->
+<script>
+    $(document).ready(function () {
+        $(".Product .btn-add").on("click", function (e) {
+            let $target = $("#Order");
+            // 주문 수량 처리
+            let order_id = "#" + $(this).closest("div").attr("data-order-id");
+            let order_number = $(order_id + " .order-num").text() * 1 + 1;
+            $(order_id + " .order-num").text(order_number);
+            let total_number = $("#order-total-num").text() * 1;
+            total_number += 1;
+            $("#order-total-num").text(total_number);
+
+            // 주문 가격 처리
+            let order_price = $(this).closest("div").find(".price").text() * 1;
+            let total_price = $("#order-total-price").text() * 1;
+            $("#order-total-price").text(total_price + order_price);
+
+        });
+
+        $(".Product .btn-delete").on("click", function (e) {
+            let $target = $("#Order");
+            let order_id = "#" + $(this).closest("div").attr("data-order-id");
+
+            let order_number = $(order_id + " .order-num").text() * 1;
+            if (order_number > 0) {
+                $(order_id + " .order-num").text(order_number - 1);
+                let total_number = $("#order-total-num").text() * 1;
+                $("#order-total-num").text(total_number - 1);
+                let order_price = $(this).closest("div").find(".price").text() * 1;
+                let total_price = $("#order-total-price").text() * 1;
+                $("#order-total-price").text(total_price - order_price);
+            }
+
+        });
+
+        $("#sidebarToggle").click(function () {
+            if ($("#sidebar-wrapper").hasClass("hide"))
+                $("#sidebar-wrapper").removeClass("hide");
+            else
+                $("#sidebar-wrapper").addClass("hide");
+        });
+
+    })
+
+    /*  $("#product").click(function(){
+          let $target = $("#Product-num");
+          let number = $target.text() * 1;
+          $target.text(++number);
+      });
+      $("#orange").click(function(){
+          let $target = $("#orange-num");
+          let number = $target.text() * 1;
+          $target.text(++number);
+      });
+  });*/
+</script>
+</body>
+</html>
