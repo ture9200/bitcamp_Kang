@@ -3,7 +3,6 @@
 강요천 강사님과 실습 (21.11.08 ~ 21.11.23) 
 
 NodeJS, Jquery, HTML, CSS
-
 11월 8일
 
 nodejs, webstorm 설치
